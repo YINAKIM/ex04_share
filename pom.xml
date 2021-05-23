@@ -72,6 +72,12 @@
       <version>5.2.0.RELEASE</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
 
 
 
@@ -172,7 +178,7 @@
     <dependency>
       <groupId>com.zaxxer</groupId>
       <artifactId>HikariCP</artifactId>
-      <version>3.3.1</version>
+      <version>4.0.3</version>
     </dependency>
 
     <!-- 마이바티스 : persistence framework -> DB작업 하는 프레임워크
@@ -259,9 +265,6 @@
       <version>2.9.4</version>
     </dependency>
 
-
-<!--  Junit 4.12  -->
-
   </dependencies>
 
 
@@ -306,6 +309,16 @@
         </plugin>
       </plugins>
     </pluginManagement>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>8</source>
+                  <target>8</target>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
 
 </project>
