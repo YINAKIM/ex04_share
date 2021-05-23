@@ -1,0 +1,4 @@
+org/zerock/service/TimeMapperTests.class
+org/zerock/service/JDBCTests.class
+org/zerock/service/SampleServiceTests.class
+org/zerock/service/DataSourceTests.class
