@@ -1,7 +1,0 @@
-org/zerock/controller/SampleControllerTests.class
-org/zerock/mapper/ReplyMapperTests.class
-org/zerock/service/SampleServiceTests.class
-org/zerock/service/TimeMapperTests.class
-org/zerock/service/JDBCTests.class
-org/zerock/service/DataSourceTests.class
-org/zerock/service/SampleTxServiceTests.class

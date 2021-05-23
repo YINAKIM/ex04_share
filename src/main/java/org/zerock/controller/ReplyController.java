@@ -11,6 +11,8 @@ import org.zerock.domain.ReplyPageDTO;
 import org.zerock.domain.ReplyVO;
 import org.zerock.service.ReplyService;
 
+import java.util.List;
+
 
 @RestController
 @Log4j
@@ -51,7 +53,7 @@ public class ReplyController {
 
 
     //댓글조회
-  /*  @GetMapping("/pages/{bno}/{page}")
+/*    @GetMapping("/pages/{bno}/{page}")
     public ResponseEntity<List<ReplyVO>> getList(
             @PathVariable("page") int page, @PathVariable("bno") Long bno){
         log.info("getList..........");
@@ -64,6 +66,17 @@ public class ReplyController {
         return responseEntity;
 
     }*/
+
+    //댓글 조회 + 페이징추가
+    @GetMapping(value = "/pages/{bno}/{page}"
+            ,produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<ReplyPageDTO> getList(@PathVariable("page") int page, @PathVariable("bno")Long bno){
+        Criteria cri = new Criteria(page,10);
+        log.info("get Reply List bno : "+bno);
+        log.info("cri : "+cri);
+        return new ResponseEntity<>(service.getListPage(cri,bno),HttpStatus.OK);
+
+    }
 
     /********************************************************************************************/
     //{rno}받아서 댓글 삭제 --> 똑같이 "/{rno}"로 요청들어오는데 삭제할 수 있는 이유?
@@ -105,14 +118,5 @@ public class ReplyController {
      }
 
 
-     //댓글 조회 + 페이징추가
-    @GetMapping(value = "/pages/{bno}/{page}"
-    ,produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<ReplyPageDTO> getList(@PathVariable("page") int page, @PathVariable("bno")Long bno){
-         Criteria cri = new Criteria(page,10);
-         log.info("get Reply List bno : "+bno);
-         log.info("cri : "+cri);
-         return new ResponseEntity<>(service.getListPage(cri,bno),HttpStatus.OK);
 
-    }
 }

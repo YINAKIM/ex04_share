@@ -156,7 +156,7 @@
                                     }//for
 
                                     replyUL.html(str);
-                                    showReplyPageCnt(replyCnt);
+                                    showReplyPage(replyCnt);
                             });//getList
                         }//showList
 
@@ -413,8 +413,8 @@
                             }
                         );//replyService.get
 
-                    });
                 */
+                    });
                 </script>
 
                 <script type="text/javascript">

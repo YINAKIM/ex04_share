@@ -103,12 +103,12 @@
 
 
 
-    <!-- javax.servlet-api : 3.0 이상 유지
-        https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <!-- javax.servlet-api : 3.0 이상 유지 + web.xml에서 스키마 쪽에있는 버전이랑 일치시켜야
+    이름이 [spring_web]인, 둘 이상의 fragment들이 발견되었습니다.에러 방지 -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
 

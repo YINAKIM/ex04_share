@@ -71,9 +71,9 @@
 <!-- 댓글 수 처리 -->
     <select id="getCountByBno" resultType="int">
 <![CDATA[
-    SELECT COUNT(RNO
+    SELECT COUNT(RNO)
       FROM TBL_REPLY
-     WHERE BNO = #{bno}00
+     WHERE BNO = #{bno}
 ]]>
     </select>
 </mapper>
